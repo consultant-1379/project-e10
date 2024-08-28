@@ -1,0 +1,83 @@
+{
+    "1" : {
+        "Question" : "1. Do you have a collaborative culture (e.g. big but not specific/highly detailed goals with no fixed delivery dates)?",
+        "No" :{
+            "1" : "Project managers coordinate between all the different teams working on the same project, and the teams have highly specialised responsibilities.",
+            "2" : "Our development teams focus on achieving small, defined objectives quickly and then moving immediately to the next one.",
+            "3" : "A lot of up-front planning goes into documenting each step of a project before it even begins",
+            "4" : "Each team contain a mix of members whose different areas of expertise cover the full spectrum of skills needed for crafting a releasable increment"
+        }
+    },
+    "2" : {
+        "Question" : "2. Are you product and design data driven (that is they are rapidly prototyped, deployed and evaluated based on real customer usage before deciding on further development or retirement)",
+        "No" :{
+            "1" : "We have product roadmaps spanning months or even years into the future. Our releases typically happen every six months to one year, sometimes even longer",
+            "2" : "There is pressure to deliver features, fast, and releases happen on a regular planned basis. (For example, 'We'll Feature X in two months, Feature Y in four months and Feature Z in six months'—with no deviation from the schedule)",
+            "3" : "We release large sets of related features all at once as comprehensive updates.",
+            "4" : "Our releases are usually small-scale iterative changes to existing features/services"
+        }
+    },
+    "3" : {
+        "Question" : "3. Are teams Devops teams that is self contained teams responsible for all development and deployment to production and production is monitored by SRE teams?",
+        "No" :{
+            "1" : "All decisions are made by managers, and teams must seek permission before changing any part of the project plan, no matter how small.",
+            "2" : "Applications are developed as several large components, with one team per component fully and vertically responsible for the build",
+            "3" : "We have separate teams of specialists to handle different areas: design, architecture, security, testing, etc. When our team’s piece of a project is finished, we hand it off to the next team",
+            "4" : "Our teams are mixed: We have developers, QA/testing, someone with server experience, etc. all in one group. We don’t talk to other teams very much since our teams are meant to be self-sufficient and independent"
+        }
+    },
+    "4" : {
+        "Question" : "4. Do you use research and experimentation techniques for large and complex problems using lots of proof of concepts to compare options, using Kanban to clarify the project then Agile methods like Scrum once problem is well understood?",
+        "No" :{
+            "1" : "We do all our planning up front, and then hand off to teams for execution. Managers handle the collaboration and communication between our teams",
+            "2" : "A team will work on one small, defined project and deliver it in two to four weeks. If a new feature request comes in the middle of a delivery cycle, we may or may not be able to add it in",
+            "3" : "If a new feature request comes in the middle of a delivery cycle, we have to wait for the next cycle to plan for and incorporate it",
+            "4" : "If we can’t coordinate or fix an issue on the last day or two of a production cycle, we can’t ship—so when a bug or some other problem pops up it’s hard to do anything more than a quick fix. (Following up to address an issue in more depth requires a dedicated sprint so we can focus on it)"
+        }
+    },
+    "5" : {
+        "Question" : "5. Do you have a microprocessor architecture built from independently deployable services?",
+        "No" :{
+            "1" : "Our system is very big. Few people understand the whole thing. We fear the domino effect: If you change something, you have to be very careful because it could  break something else",
+            "2" : "Our application(s) is(are) divided into components, probably no more than five or six, communicating through networking",
+            "3" : "When we deliver, everything is delivered together, all ready on the same day and at a uniformly high level of quality",
+            "4" : "The scope of an app in development is defined by the deployment schedule. Each feature or piece of functionality is broken down into deliverable chunks that fit into the schedule"
+        }
+    },
+    "6" : {
+        "Question" : "6. Does your system collect metrics, alerts tracing and logging to provide a view of the running system and try to keep itself alive through self healing if things begin to deteriorate?",
+        "No" :{
+            "1" : "We have some simple automation, like scripts, for alerting large-scale issues and outages in the field. We find out about many smaller problems from user reports",
+            "2" : "Our systems have full and continuous monitoring, and our Ops team spends lots of time checking on alerts. A lot of time, our system alerts turn out to be nothing",
+            "3" : "When problems arise, we have to open each server to understand what happened because we don’t have central logs or tracing. Then we fix it manually: someone from Operations logs into a production server and follows a preset procedure",
+            "4" : "Some of our system update processes are fully automated and patches can be applied quickly—but a human still has to initialise the process"
+        }
+    },
+    "7" : {
+        "Question" : "7. Do you deliver multiple times a day your releasable software?",
+        "No" :{
+            "1" : "We do ‘big bang’ releases that roll lots of changes into one new version, every six to 12 months. A lot of up-front planning goes into our next release before any actual development begins",
+            "2" : "Our delivery process includes some test automation and automated build, but outside of final integration. In an emergency, we can make manual updates to the production codebase",
+            "3" : "We don’t like to make changes to our production code, even emergency ones, because there are so many dependencies. Change is risky. Once we release a software version all changes have to wait for the next version roll out",
+            "4" : "New functionality requests typically can be accommodated within a few weeks, if they are urgent"
+        }
+    },
+    "8" : {
+        "Question" : "8. Do you run on Kubernetes?",
+        "No" :{
+            "1" : "Operations team is in charge of provisioning, period. You have to write a ticket to provision a machine—engineers can’t self-service",
+            "2" : "A machine can be provisioned (possibly even autoprovisioned) in hours, or maybe a day or two, and the process is fully automated by Ops",
+            "3" : "Developers write applications, and specify what they will need to run successfully in production (OS, libraries, dependent tools). The Ops team manually configures the production machines to meet the machine dependencies the Dev team specified.",
+            "4" : "Provisioning is a mix of automation and manual work. Any task taking longer than a week to provision to VM breaks the production cycle, so is a nonstarter."
+        }
+    },
+    "9" : {
+        "Question" : "9. Do you deploy your software in containers?",
+        "No" :{
+            "1" : "We have multiple physical servers in our own private data center (either on premises or co-located). If one of our servers goes down, we have to manually provision its replacement",
+            "2" : "We don’t use physical servers—we have VMs. We also have some instances in the cloud, which we manage manually",
+            "3" : "A data centre failure is just about the worst disaster we can imagine",
+            "4" : "Provisioning infrastructure is a mix of automation and manual work, so a new VM can take a couple of days to set up"
+        }
+    }
+}

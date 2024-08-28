@@ -1,0 +1,5 @@
+!.mvn
+local-sonar
+.scannerwork
+lcov-report
+node_modules
